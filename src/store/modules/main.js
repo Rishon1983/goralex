@@ -1,6 +1,8 @@
 // import mainData from '../../api/mainData'
 
 // initial state
+import mainData from "@/api/mainData";
+
 const state = {
     msg: 'Welcome to GorAlex'
 }
@@ -11,9 +13,14 @@ const getters = {}
 // actions are functions that cause side effects and can involve
 // asynchronous operations.
 const actions = {
-    updateMessage({state, commit}, event) {
-        commit('setMainMessage', event.target.value)
+    getMainMessage({commit}) {
+        mainData.getMainMsg(msg => {
+            commit('setMainMessage', msg)
+        })
     },
+    updateMessage({commit}, event) {
+        commit('setMainMessage', event.target.value)
+    }
 }
 // mutations are operations that actually mutate the state.
 // each mutation handler gets the entire state tree as the

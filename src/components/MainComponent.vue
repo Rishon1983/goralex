@@ -51,6 +51,9 @@
             ...mapActions('main', [
                 'updateMessage'
             ]),
+        },
+        created () {
+            this.$store.dispatch('main/getMainMessage')
         }
     }
 </script>
