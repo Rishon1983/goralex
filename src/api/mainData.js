@@ -1,7 +1,7 @@
 /**
  * Mocking client-server processing
  */
-const _msg = 'Add your message:'
+const _msg = 'message from DB'
 
 export default {
     getMainMsg(cb) {

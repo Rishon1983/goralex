@@ -2,16 +2,19 @@
     <div id="app">
         <img alt="Vue logo" src="./assets/dev.jpg">
         <MainComponent/>
+        <DeleteButtonComponent/>
     </div>
 </template>
 
 <script>
     import MainComponent from './components/MainComponent'
+    import DeleteButtonComponent from './components/DeleteButtonComponent'
 
     export default {
         name: 'app',
         components: {
-            MainComponent
+            MainComponent,
+            DeleteButtonComponent
         }
     }
 </script>

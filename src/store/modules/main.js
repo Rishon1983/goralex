@@ -1,10 +1,9 @@
-// import mainData from '../../api/mainData'
-
-// initial state
 import mainData from "@/api/mainData";
 
+// initial state
 const state = {
-    msg: 'Welcome to GorAlex'
+    msgTitle: 'Welcome to GorAlex',
+    msg: ''
 }
 
 // getters are functions.
@@ -15,11 +14,11 @@ const getters = {}
 const actions = {
     getMainMessage({commit}) {
         mainData.getMainMsg(msg => {
-            commit('setMainMessage', msg)
+            commit('setMainMessage', {msg: msg, msgTitle: 'Add your message:'})
         })
     },
-    updateMessage({commit}, event) {
-        commit('setMainMessage', event.target.value)
+    updateMessage({commit}, msg) {
+        commit('setMainMessage', {msg: msg, msgTitle: msg || 'Add your message:'})
     }
 }
 // mutations are operations that actually mutate the state.
@@ -28,8 +27,9 @@ const actions = {
 // mutations must be synchronous and can be recorded by plugins
 // for debugging purposes.
 const mutations = {
-    setMainMessage(state, message) {
-        state.msg = message;
+    setMainMessage(state, messageData) {
+        state.msgTitle = messageData.msgTitle
+        state.msg = messageData.msg
     }
 }
 
