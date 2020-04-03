@@ -1,6 +1,9 @@
 <template>
     <div class="main-component">
-        <h1>{{ msg }}</h1>
+        <h1>{{ message }}</h1>
+        <label>
+            <input class="title-msg-input" :title="message" @input="updateMessage">
+        </label>
         <p>
             For a guide and recipes on how to configure / customize this project,<br>
             check out the
@@ -34,10 +37,20 @@
 </template>
 
 <script>
+    import {mapState, mapActions} from 'vuex'
+
     export default {
         name: 'MainComponent',
-        props: {
-            msg: String
+        props: {},
+        computed: {
+            ...mapState({
+                message: state => state.main.msg
+            })
+        },
+        methods: {
+            ...mapActions('main', [
+                'updateMessage'
+            ]),
         }
     }
 </script>
@@ -60,5 +73,12 @@
 
     a {
         color: #42b983;
+    }
+
+    .main-component {
+        .title-msg-input {
+            height: 30px;
+            padding: 0 5px;
+        }
     }
 </style>

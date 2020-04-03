@@ -1,12 +1,12 @@
 <template>
     <div id="app">
         <img alt="Vue logo" src="./assets/dev.jpg">
-        <MainComponent msg="Welcome to Goralex"/>
+        <MainComponent/>
     </div>
 </template>
 
 <script>
-    import MainComponent from './components/MainComponent.vue'
+    import MainComponent from './components/MainComponent'
 
     export default {
         name: 'app',
