@@ -8,7 +8,7 @@
             <!-- use router-link component for navigation. -->
             <!-- specify the link by passing the `to` prop. -->
             <!-- <router-link> will be rendered as an `<a>` tag by default -->
-            <router-link to="/home" tag="div" class="menu-option">Home</router-link>
+            <router-link to="/" tag="div" class="menu-option">Home</router-link>
             <router-link to="/about" tag="div" class="menu-option">About</router-link>
         </div>
         <!-- route outlet -->
@@ -73,12 +73,12 @@
                     text-decoration: none;
                 }
 
-                &.router-link-active {
+                &.router-link-exact-active {
                     background-color: #848484;
                     color: #ffffff;
                 }
 
-                &:not(.router-link-active) {
+                &:not(.router-link-exact-active) {
                     &:hover {
                         cursor: pointer;
                         background-color: #d9d9d9;

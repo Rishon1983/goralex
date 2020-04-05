@@ -4,7 +4,7 @@ import About from './components/AboutComponent';
 /*Create the router with route components*/
 export default [
     {
-        path: '/home',
+        path: '/',
         component: HomeComponent
     },
     {
