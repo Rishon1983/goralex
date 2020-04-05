@@ -12,7 +12,7 @@
     import {mapState, mapActions} from 'vuex'
 
     export default {
-        name: 'MainComponent',
+        name: 'WelcomeComponent',
         props: {},
         computed: {
             ...mapState({
