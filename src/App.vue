@@ -12,6 +12,7 @@
 
     import MainNavBar from "./components/MainNavBar";
     import HeaderComponent from "./components/HeaderComponent";
+
     export default {
         name: 'app',
         components: {
@@ -22,12 +23,26 @@
 </script>
 
 <style lang="scss">
-    html, body {
-       padding: 0;
-       margin: 0;
+    @font-face {
+        font-family: Roboto;
+        src: url('fonts/roboto/Roboto-Regular.ttf');
     }
+    @font-face {
+        font-family: Gotu;
+        src: url('fonts/gotu/Gotu-Regular.ttf');
+    }
+    @font-face {
+        font-family: Lobster;
+        src: url('fonts/lobster/Lobster-Regular.ttf');
+    }
+    html, body {
+        padding: 0;
+        margin: 0;
+    }
+
     #app {
-        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        /*font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
+        font-family: Roboto, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
