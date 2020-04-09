@@ -3,6 +3,12 @@ import App from './App.vue'
 import store from './store'
 import VueRouter from 'vue-router'
 import routes from './routes'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCaretRight, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faCaretRight, faChevronCircleRight)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false;
 Vue.config.devtools = true;

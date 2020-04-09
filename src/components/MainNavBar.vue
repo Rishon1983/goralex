@@ -72,6 +72,7 @@
         padding: 0;
         margin: 0;
         color: #ffffff;
+        z-index: 500;
 
         .one-route {
             display: flex;

@@ -27,14 +27,17 @@
         font-family: Roboto;
         src: url('fonts/roboto/Roboto-Regular.ttf');
     }
+
     @font-face {
         font-family: Gotu;
         src: url('fonts/gotu/Gotu-Regular.ttf');
     }
+
     @font-face {
         font-family: Lobster;
         src: url('fonts/lobster/Lobster-Regular.ttf');
     }
+
     html, body {
         padding: 0;
         margin: 0;
@@ -45,7 +48,10 @@
         font-family: Roboto, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        text-align: center;
         color: #2c3e50;
+
+        div {
+            box-sizing: border-box;
+        }
     }
 </style>

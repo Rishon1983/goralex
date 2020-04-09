@@ -15,8 +15,13 @@ export default [
                 active: false
             },
             {
-                name: 'Education and Skills',
-                path: '#educationAndSkills',
+                name: 'Education',
+                path: '#education',
+                active: false
+            },
+            {
+                name: 'Programming skills',
+                path: '#skills',
                 active: false
             },
             {
