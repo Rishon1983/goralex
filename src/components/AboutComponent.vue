@@ -106,7 +106,8 @@
             </div>
             <div class="cv-container">
                 <a href="/CV/CV.pdf" class="download" download="CV-Alexander Gorbatovsky">Download CV</a>
-                <a href="/CV/CV-hebrew.pdf" class="download" download="CV-hebrew Alexander Gorbatovsky">Download CV in Hebrew</a>
+                <a href="/CV/CV-hebrew.pdf" class="download" download="CV-hebrew Alexander Gorbatovsky">Download CV in
+                    Hebrew</a>
             </div>
         </div>
     </div>
@@ -199,7 +200,7 @@
                         color: #fff;
                         border: 7px solid #e9ecef;
                         border-radius: 50%;
-                        background-color: #2c3e50;;
+                        background-color: #2c3e50;
                         top: calc(50% - 85px);
                         left: calc(50% - 85px);
                         font-family: 'Lobster', Lobster, Arial, sans-serif;

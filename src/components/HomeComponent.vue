@@ -3,6 +3,7 @@
         <AboutComponent/>
         <EducationComponent/>
         <SkillsComponent/>
+        <ContactComponent/>
     </div>
 </template>
 
@@ -10,13 +11,15 @@
     import AboutComponent from "./AboutComponent";
     import EducationComponent from "./EducationComponent";
     import SkillsComponent from "./SkillsComponent";
+    import ContactComponent from "./ContactComponent";
 
     export default {
         name: "HomeComponent",
         components: {
             AboutComponent,
             EducationComponent,
-            SkillsComponent
+            SkillsComponent,
+            ContactComponent
         }
     }
 </script>
@@ -35,13 +38,13 @@
     }
 
     .main-title {
-        font-size: 50px;
+        font-size: 3.1rem;
         font-family: 'Lobster', Lobster, Arial, sans-serif;
     }
 
     a.download {
         text-decoration: none;
-        color: #4d7bff;
+        color: #2f5ad6;
 
         &:hover {
             text-decoration: underline;
