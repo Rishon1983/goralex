@@ -1,5 +1,5 @@
 <template>
-    <div class="header">
+    <div id="main-header" class="header">
         <div @click="activeHome" class="header-text-container">
             <router-link to="/" tag="div" class="header-text" data-text="gorALeX">gorALex</router-link>
         </div>
@@ -31,7 +31,7 @@
 
 <style lang="scss" scoped>
 
-    .header {
+    #main-header.header {
         display: flex;
         align-items: center;
         height: 500px;

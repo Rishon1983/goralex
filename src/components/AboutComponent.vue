@@ -1,9 +1,9 @@
 <template>
-    <div id="about" class="about-component">
+    <div id="about" class="about-component page-section">
         <div class="container">
             <div class="title-container">
-                <div class="title">About me</div>
-                <div class="title">Alexander Gorbatovsky</div>
+                <div class="main-title title">About me</div>
+                <div class="main-title title">Alexander Gorbatovsky</div>
                 <div class="profile-img-container">
                     <img alt="logo" src="@/assets/about/my-photo.jpg">
                 </div>
@@ -105,8 +105,8 @@
                 </div>
             </div>
             <div class="cv-container">
-                <a href="/CV/CV.pdf" download="CV-Alexander Gorbatovsky">Download CV</a>
-                <a href="/CV/CV-hebrew.pdf" download="CV-hebrew Alexander Gorbatovsky">Download CV in Hebrew</a>
+                <a href="/CV/CV.pdf" class="download" download="CV-Alexander Gorbatovsky">Download CV</a>
+                <a href="/CV/CV-hebrew.pdf" class="download" download="CV-hebrew Alexander Gorbatovsky">Download CV in Hebrew</a>
             </div>
         </div>
     </div>
@@ -119,7 +119,7 @@
 </script>
 
 <style lang="scss" scoped>
-    .about-component {
+    #about.about-component {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -131,7 +131,6 @@
             align-items: center;
             max-width: 1200px;
             width: 100%;
-            margin: 30px 0 20px 0;
 
             .title-container {
                 width: 100%;
@@ -141,8 +140,6 @@
                 justify-content: center;
 
                 .title {
-                    font-size: 50px;
-                    font-family: 'Lobster', Lobster, Arial, sans-serif;
                     margin-bottom: 10px;
                 }
 
@@ -188,7 +185,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: flex-start;
-                    height: 300px;
+                    height: 280px;
                     width: 100%;
                     position: relative;
 
@@ -281,14 +278,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-
-                a {
-                    text-decoration: none;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
+                margin-top: 40px;
             }
         }
     }
