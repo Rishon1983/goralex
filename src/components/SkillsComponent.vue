@@ -5,7 +5,7 @@
             <div class="skills-container">
                 <div v-for="(skill, index) of skills" :key="index" class="one-skill">
                     <div class="logo-container">
-                        <img :src="getLogoPath(skill)">
+                        <img alt="skill image" :src="getLogoPath(skill)">
                     </div>
                     <div class="skill-info">
                         <div class="title">{{skill.name}}</div>

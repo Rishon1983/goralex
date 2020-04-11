@@ -5,7 +5,7 @@
                 <div class="main-title title">About me</div>
                 <div class="main-title title">Alexander Gorbatovsky</div>
                 <div class="profile-img-container">
-                    <img alt="logo" src="@/assets/about/my-photo.jpg">
+                    <img alt="my photo" src="@/assets/about/my-photo.jpg">
                 </div>
                 <div class="title-info">
                     <div class="one-raw">
@@ -218,7 +218,7 @@
                         width: 100%;
 
                         .timeline-title-container {
-                            font-size: 1.2rem;
+                            font-size: 1.2em;
                             margin-bottom: 0.3em;
                             font-weight: bold;
                         }

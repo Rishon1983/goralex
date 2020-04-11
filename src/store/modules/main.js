@@ -1,9 +1,6 @@
-import mainData from "@/api/mainData";
-
 // initial state
 const state = {
-    msgTitle: 'Welcome to GorAlex',
-    msg: ''
+    isShowBackdrop: false
 }
 
 // getters are functions.
@@ -12,13 +9,8 @@ const getters = {}
 // actions are functions that cause side effects and can involve
 // asynchronous operations.
 const actions = {
-    getMainMessage({commit}) {
-        mainData.getMainMsg(msg => {
-            commit('setMainMessage', {msg: msg, msgTitle: 'Add your message:'})
-        })
-    },
-    updateMessage({commit}, msg) {
-        commit('setMainMessage', {msg: msg, msgTitle: msg || 'Add your message:'})
+    isShowBackdropAction({commit}){
+        commit('isShowBackdrop')
     }
 }
 // mutations are operations that actually mutate the state.
@@ -27,9 +19,8 @@ const actions = {
 // mutations must be synchronous and can be recorded by plugins
 // for debugging purposes.
 const mutations = {
-    setMainMessage(state, messageData) {
-        state.msgTitle = messageData.msgTitle
-        state.msg = messageData.msg
+    isShowBackdrop(state){
+        state.isShowBackdrop = !state.isShowBackdrop
     }
 }
 

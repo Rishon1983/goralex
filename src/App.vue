@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <HeaderComponent/>
-        <MainNavBar/>
+        <MainNavBarComponent/>
         <!-- route outlet -->
         <!-- component matched by the route will render here -->
         <router-view></router-view>
@@ -10,14 +10,14 @@
 
 <script>
 
-    import MainNavBar from "./components/MainNavBar";
+    import MainNavBarComponent from "./components/MainNavBarComponent";
     import HeaderComponent from "./components/HeaderComponent";
 
     export default {
         name: 'app',
         components: {
             HeaderComponent,
-            MainNavBar
+            MainNavBarComponent
         }
     }
 </script>

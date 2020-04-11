@@ -120,8 +120,8 @@
                         input, textarea {
                             padding: 20px;
                             border: 1px solid #ced4da;
-                            border-radius: .25rem;
-                            font-size: 1rem;
+                            border-radius: .25em;
+                            font-size: 1em;
                             font-weight: 400;
                             line-height: 1.5;
 
@@ -145,7 +145,7 @@
                             font-family: Roboto, Arial, sans-serif;
                             margin: 0 0 0 10px;
                             height: 100%;
-                            font-size: 1rem;
+                            font-size: 1em;
                             font-weight: 400;
                             line-height: 1.5;
                         }
@@ -160,13 +160,14 @@
                     justify-content: center;
                     background-color: #2c3e50;
                     color: #ffffff;
-                    border-radius: .25rem;
-                    font-size: 1rem;
+                    border-radius: .25em;
+                    font-size: 1em;
                     font-weight: 400;
                     margin: 20px;
 
                     &:hover {
                         background-color: #2f5ad6;
+                        transition: all ease .5s;
                         cursor: pointer;
                     }
                 }
@@ -190,7 +191,7 @@
                             .title {
                                 font-family: 'Avenir', Helvetica, Arial, sans-serif;
                                 color: #2c3e50;
-                                font-size: 1.1rem;
+                                font-size: 1.1em;
                                 margin-top: 5px;
                             }
                         }

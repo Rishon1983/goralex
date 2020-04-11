@@ -1,6 +1,6 @@
 import HomeComponent from './components/HomeComponent';
 import CodingComponent from "./components/CodingComponent";
-import PageNotFound from "./components/PageNotFound";
+import PageNotFoundComponent from "./components/PageNotFoundComponent";
 
 /*Create the router with route components*/
 export default [
@@ -45,7 +45,7 @@ export default [
     {
         path: "*",
         name: '404',
-        component: PageNotFound,
+        component: PageNotFoundComponent,
         tags: []
     }
 ];

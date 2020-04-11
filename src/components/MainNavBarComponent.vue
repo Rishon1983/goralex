@@ -25,7 +25,7 @@
     import routes from "../routes";
 
     export default {
-        name: "MainNavBar",
+        name: "MainNavBarComponent",
         data() {
             return {
                 displayRoutes: []
