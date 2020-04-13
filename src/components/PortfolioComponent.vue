@@ -52,6 +52,13 @@
                         date: '2015'
                     },
                     {
+                        name: 'GorAlex',
+                        site: 'http://goralex.com/',
+                        image: 'goralex-php.jpg',
+                        description: `Previous version of the site goralex. It was written with framework php phalcon.`,
+                        date: '2015'
+                    },
+                    {
                         name: 'Victoria-I.H.C.',
                         site: 'http://v-ihc.com/',
                         image: 'vihc.jpg',
