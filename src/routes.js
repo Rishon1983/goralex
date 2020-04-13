@@ -11,27 +11,27 @@ export default [
         tags: [
             {
                 name: 'About Me',
-                path: '#about',
+                path: 'about',
                 active: false
             },
             {
                 name: 'Education',
-                path: '#education',
+                path: 'education',
                 active: false
             },
             {
                 name: 'Programming skills',
-                path: '#skills',
-                active: false
-            },
-            {
-                name: 'Contact',
-                path: '#contact',
+                path: 'skills',
                 active: false
             },
             {
                 name: 'Portfolio',
-                path: '#portfolio',
+                path: 'portfolio',
+                active: false
+            },
+            {
+                name: 'Contact',
+                path: 'contact',
                 active: false
             },
         ]

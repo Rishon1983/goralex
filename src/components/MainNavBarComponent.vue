@@ -37,6 +37,7 @@
                 tags.forEach((tag, index) => {
                     if (index === activeIndex) {
                         tag.active = true;
+                        document.getElementById(tag.path).scrollIntoView({behavior: "smooth"});
                     } else {
                         tag.active = false;
                     }
