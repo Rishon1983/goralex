@@ -14,12 +14,12 @@
 </template>
 
 <script>
-    import {mapState, mapActions} from 'vuex'
+    import {mapState, mapActions} from 'vuex';
 
     export default {
         name: "PortfolioProjectDetails",
         data() {
-            return {}
+            return {};
         },
         computed: {
             ...mapState({
@@ -39,11 +39,11 @@
                 'openCloseProject',
             ]),
             openCloseProjectLocally() {
-                this.openCloseProject()
-                this.isShowBackdropAction()
+                this.openCloseProject();
+                this.isShowBackdropAction();
             },
             getImgPath(image) {
-                return require(`@/assets/portfolio/` + image)
+                return require(`@/assets/portfolio/` + image);
             },
         },
     }

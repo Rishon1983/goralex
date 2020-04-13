@@ -71,7 +71,7 @@
                     email: '',
                     message: ''
                 },
-            }
+            };
         },
         methods: {
             isEmailValid() {

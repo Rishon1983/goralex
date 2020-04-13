@@ -48,4 +48,4 @@ export default [
         component: PageNotFoundComponent,
         tags: []
     }
-];
+]

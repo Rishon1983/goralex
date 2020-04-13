@@ -146,11 +146,11 @@
                     },
 
                 ]
-            }
+            };
         },
         methods: {
             getLogoPath(skill) {
-                return require(`@/assets/skills/` + skill.logoPath)
+                return require(`@/assets/skills/` + skill.logoPath);
             }
         }
     }

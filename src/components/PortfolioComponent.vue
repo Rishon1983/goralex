@@ -59,11 +59,11 @@
                         date: '2013'
                     }
                 ]
-            }
+            };
         },
         methods: {
             getImgPath(project) {
-                return require(`@/assets/portfolio/` + project.image)
+                return require(`@/assets/portfolio/` + project.image);
             },
             ...mapActions('portfolioProjectDetails', [
                 'openCloseProject'
@@ -72,8 +72,8 @@
                 'isShowBackdropAction'
             ]),
             openCloseProjectLocally(oneProject) {
-                this.openCloseProject(oneProject)
-                this.isShowBackdropAction()
+                this.openCloseProject(oneProject);
+                this.isShowBackdropAction();
             }
         }
     }

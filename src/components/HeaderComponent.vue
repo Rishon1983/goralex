@@ -14,13 +14,13 @@
         data() {
             return {
                 backgroundImg: ""
-            }
+            };
         },
         methods: {
             activeHome() {
                 routes.forEach(oneRoute => {
                     oneRoute.tags.forEach(tag => {
-                        tag.active = false
+                        tag.active = false;
                     })
                 })
             }

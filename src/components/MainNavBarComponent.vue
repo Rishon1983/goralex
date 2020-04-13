@@ -29,30 +29,30 @@
         data() {
             return {
                 displayRoutes: []
-            }
+            };
         },
         computed: {},
         methods: {
             activeTag(tags, activeIndex) {
                 tags.forEach((tag, index) => {
                     if (index === activeIndex) {
-                        tag.active = true
+                        tag.active = true;
                     } else {
-                        tag.active = false
+                        tag.active = false;
                     }
                 })
             },
             resetTags() {
                 this.displayRoutes.forEach(oneRoute => {
                     oneRoute.tags.forEach(tag => {
-                        tag.active = false
+                        tag.active = false;
                     })
                 })
             }
         },
         created() {
             this.displayRoutes = routes.filter(route => {
-                return route.name !== '404'
+                return route.name !== '404';
             });
         }
     }
