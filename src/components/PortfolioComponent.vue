@@ -159,4 +159,32 @@
             }
         }
     }
+
+    /*media*/
+    @media screen and (max-width: 1200px) {
+    }
+
+    @media screen and (max-width: 1000px) {
+        #portfolio.portfolio-component {
+            .container {
+                .portfolio-projects-container {
+                    .portfolio-project {
+                        width: 48%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 770px) {
+        #portfolio.portfolio-component {
+            .container {
+                .portfolio-projects-container {
+                    .portfolio-project {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 </style>

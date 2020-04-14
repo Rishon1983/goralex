@@ -154,7 +154,6 @@
 
                 .form-button {
                     height: 60px;
-                    width: 20%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -164,6 +163,7 @@
                     font-size: 1em;
                     font-weight: 400;
                     margin: 20px;
+                    padding: 0 15px;
 
                     &:hover {
                         background-color: #2f5ad6;
@@ -233,6 +233,63 @@
                         .one-contact {
                             margin: 0 10px;
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    /*media*/
+    @media screen and (max-width: 1200px) {
+        #contact.contact-component {
+            .container {
+                .map-container {
+                    width: 85%;
+                }
+
+                .form-mail-container {
+                    width: 85%;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        #contact.contact-component {
+            .container {
+                .map-container {
+                    width: 100%;
+                }
+
+                .form-mail-container {
+                    width: 100%;
+                }
+
+                .contact-info-container {
+                    width: 100%;
+
+                    .contact-info {
+                        .one-contact {
+                            a {
+                                .title {
+                                    font-size: 1em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 770px) {
+        #contact.contact-component {
+            .container {
+
+                .contact-info-container {
+
+                    .contact-info:not(.social-networks) {
+                        flex-direction: column;
                     }
                 }
             }

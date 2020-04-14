@@ -283,4 +283,113 @@
             }
         }
     }
+
+    /*media*/
+    @media screen and (max-width: 1200px) {
+        #about.about-component {
+            .container {
+                .timeline-content {
+                    .timeline {
+                        .timeline-image {
+                            width: 140px;
+                            height: 140px;
+                            left: calc(50% - 71px);
+                        }
+
+                        &:nth-child(odd) {
+                            .timeline-panel {
+                                padding-inline-end: calc(50% + 85px);
+                            }
+                        }
+
+                        &:nth-child(even) {
+                            .timeline-panel {
+                                padding-inline-start: calc(50% + 70px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        #about.about-component {
+            .container {
+                .timeline-content {
+                    .timeline {
+                        height: 250px;
+
+                        .timeline-image {
+                            width: 120px;
+                            height: 120px;
+                            left: 0;
+                        }
+
+                        &:nth-child(odd), &:nth-child(even) {
+                            .timeline-panel {
+                                padding-inline-start: 140px;
+                                padding-inline-end: 0;
+                            }
+                        }
+
+                        &:before {
+                            left: 60px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 770px) {
+        #about.about-component {
+            .container {
+                .title-container {
+                    .profile-img-container {
+                        width: 150px;
+                        height: 150px;
+                    }
+                }
+
+                .timeline-content {
+                    .timeline {
+                        .timeline-image {
+                            width: 100px;
+                            height: 100px;
+                            left: 0;
+                        }
+
+                        .timeline-panel {
+                            .timeline-title-container {
+                                font-size: 1em;
+                            }
+
+                            .timeline-body {
+                                font-size: 1em;
+                            }
+                        }
+
+                        &:nth-child(odd), &:nth-child(even) {
+                            .timeline-panel {
+                                padding-inline-start: 115px;
+                            }
+                        }
+
+                        &:last-child {
+                            height: 150px;
+
+                            .timeline-image {
+                                top: 50px;
+                            }
+                        }
+
+                        &:before {
+                            left: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 </style>

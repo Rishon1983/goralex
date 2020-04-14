@@ -213,4 +213,46 @@
             }
         }
     }
+
+    /*media*/
+    @media screen and (max-width: 1200px) {
+        #skills.skills-component {
+            .container {
+                .skills-container {
+                    .one-skill {
+                        width: 48%;
+                        margin: 1% 1%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        #skills.skills-component {
+            .container {
+                .skills-container {
+                    .one-skill {
+                        width: 98%;
+                        margin: 2% 1%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 770px) {
+        #skills.skills-component {
+            .container {
+                .skills-container {
+                    .one-skill {
+                        .logo-container {
+                            width: 80px;
+                            height: 80px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 </style>

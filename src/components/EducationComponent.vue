@@ -14,7 +14,7 @@
 </script>
 
 <style lang="scss" scoped>
-    #education.education-component{
+    #education.education-component {
         .container {
             display: flex;
             flex-direction: column;
@@ -29,6 +29,37 @@
                 max-width: 30%;
             }
 
+        }
+    }
+
+    /*media*/
+    @media screen and (max-width: 1200px) {
+        #education.education-component {
+            .container {
+                img {
+                    max-width: 40%;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        #education.education-component {
+            .container {
+                img {
+                    max-width: 60%;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 770px) {
+        #education.education-component {
+            .container {
+                img {
+                    max-width: 75%;
+                }
+            }
         }
     }
 

@@ -47,8 +47,12 @@
     }
 
     .main-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size: 3.1em;
         font-family: 'Lobster', Lobster, Arial, sans-serif;
+        width: 100%;
     }
 
     a.download, a.link {
@@ -57,6 +61,25 @@
 
         &:hover {
             text-decoration: underline;
+        }
+    }
+
+    /*media*/
+    @media screen and (max-width: 1200px) {
+        .page-section {
+            padding: 4.2em;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+    }
+
+    @media screen and (max-width: 770px) {
+        .page-section {
+            padding: 1em;
+        }
+        .main-title {
+            font-size: 2.3em;
         }
     }
 </style>

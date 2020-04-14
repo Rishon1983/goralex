@@ -132,4 +132,14 @@
 
         }
     }
+
+    /*media*/
+    @media screen and (max-width: 1200px) {
+    }
+
+    @media screen and (max-width: 1000px) {
+    }
+
+    @media screen and (max-width: 770px) {
+    }
 </style>
