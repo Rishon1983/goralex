@@ -7,6 +7,7 @@
         <ContactComponent/>
         <PortfolioProjectDetailsComponent/>
         <BackdropComponent/>
+        <FooterComponent/>
     </div>
 </template>
 
@@ -18,6 +19,7 @@
     import ContactComponent from "./ContactComponent";
     import PortfolioProjectDetailsComponent from "./PortfolioProjectDetailsComponent";
     import BackdropComponent from "./BackdropComponent";
+    import FooterComponent from "./FooterComponent";
 
     export default {
         name: "HomeComponent",
@@ -28,7 +30,8 @@
             PortfolioComponent,
             ContactComponent,
             PortfolioProjectDetailsComponent,
-            BackdropComponent
+            BackdropComponent,
+            FooterComponent
         }
     }
 </script>

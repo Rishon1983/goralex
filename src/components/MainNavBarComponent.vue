@@ -1,5 +1,8 @@
 <template>
     <div class="main-nav-bar">
+        <div @click="activeHome" class="header-text-container">
+            <router-link to="/" tag="div" class="header-text" data-text="gorALeX">GorAlex</router-link>
+        </div>
         <!-- use router-link component for navigation. -->
         <!-- specify the link by passing the `to` prop. -->
         <!-- <router-link> will be rendered as an `<a>` tag by default -->
@@ -48,7 +51,15 @@
                     oneRoute.tags.forEach(tag => {
                         tag.active = false;
                     })
-                })
+                });
+            },
+            activeHome() {
+                routes.forEach(oneRoute => {
+                    oneRoute.tags.forEach(tag => {
+                        tag.active = false;
+                    })
+                });
+                document.getElementById('app').scrollIntoView({behavior: "smooth"});
             }
         },
         created() {
@@ -74,6 +85,26 @@
         margin: 0;
         color: #ffffff;
         z-index: 500;
+
+        .header-text-container {
+            .header-text {
+                position: absolute;
+                height: 100%;
+                top: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 2.1em;
+                font-size: 2.1em;
+                font-family: 'Lobster', Lobster, Arial, sans-serif;
+
+                &:hover {
+                    cursor: pointer;
+                    color: #c5c5c5;
+                }
+            }
+        }
 
         .one-route {
             display: flex;

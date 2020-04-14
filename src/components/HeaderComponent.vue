@@ -1,7 +1,7 @@
 <template>
     <div id="main-header" class="header">
         <div @click="activeHome" class="header-text-container">
-            <router-link to="/" tag="div" class="header-text" data-text="gorALeX">gorALex</router-link>
+            <router-link to="/" tag="div" class="header-text">GA</router-link>
         </div>
     </div>
 </template>
@@ -34,20 +34,35 @@
     #main-header.header {
         display: flex;
         align-items: center;
-        height: 500px;
+        height: 40vh;
         background-color: #ffffff;
         color: #fff;
-        background-image: url("../assets/headerImg.jpg");
+        background-image: url("../assets/headerImgBig.jpg");
         background-repeat: no-repeat;
         background-attachment: scroll;
         background-position: center center;
         background-size: cover;
 
         .header-text {
-            color: white; /* Fallback: assume this color ON TOP of image */
-            background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRuVFILgW3IkpYAh3-q12oKmtEjL3PIwrBYySeMAo4hTOkwkjk8&usqp=CAU") no-repeat;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            display: none;
+            font-family: 'Lobster', Lobster, Arial, sans-serif;
+            color: #bdbdbd;
+        }
+    }
+
+    /*media*/
+    @media screen and (max-width: 1200px) {
+    }
+
+    @media screen and (max-width: 1000px) {
+    }
+
+    @media screen and (max-width: 770px) {
+        #main-header.header {
+            height: 20vh;
+
+            .header-text {
+            }
         }
     }
 </style>
