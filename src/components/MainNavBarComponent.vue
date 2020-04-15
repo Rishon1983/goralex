@@ -1,7 +1,7 @@
 <template>
     <div id="main-nav-bar" class="main-nav-bar-component">
         <div class="container">
-            <div @click="activeRoute()" class="header-text-container">
+            <div @click="activeRoute" class="header-text-container">
                 <router-link to="/" tag="div" class="header-text" data-text="gorALeX">GorAlex</router-link>
             </div>
             <div @click="isOpenMenu = !isOpenMenu" class="display-route">
@@ -14,7 +14,7 @@
                 <!-- specify the link by passing the `to` prop. -->
                 <!-- <router-link> will be rendered as an `<a>` tag by default -->
                 <div v-for="(oneRoute, index) in displayRoutes" :key="index" class="one-route">
-                    <div @click="activeRoute(oneRoute)" class="main-nav-bar-option-container">
+                    <div @click="activeRoute" class="main-nav-bar-option-container">
                         <router-link v-if="oneRoute.tags.length === 0" :to="oneRoute.path" tag="div"
                                      class="main-nav-bar-option one-option">
                             {{oneRoute.name}}
@@ -53,7 +53,6 @@
                 tags.forEach((tag, index) => {
                     if (index === activeIndex) {
                         tag.active = true;
-                        this.selectedTagName = tag.name;
                         document.getElementById(tag.path).scrollIntoView({behavior: "smooth"});
                     } else {
                         tag.active = false;
@@ -68,9 +67,8 @@
                     })
                 });
             },
-            activeRoute(route = this.displayRoutes[0]) {
+            activeRoute() {
                 this.resetTags();
-                this.selectedTagName = route.name;
                 this.isOpenMenu = false;
                 document.getElementById('app').scrollIntoView({behavior: "smooth"});
             },
