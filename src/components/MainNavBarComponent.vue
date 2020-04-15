@@ -61,21 +61,47 @@
                 });
                 this.isOpenMenu = false;
             },
-            activeRoute(route = this.displayRoutes[0]) {
+            resetTags() {
                 this.displayRoutes.forEach(oneRoute => {
                     oneRoute.tags.forEach(tag => {
                         tag.active = false;
                     })
                 });
+            },
+            activeRoute(route = this.displayRoutes[0]) {
+                this.resetTags();
                 this.selectedTagName = route.name;
                 this.isOpenMenu = false;
                 document.getElementById('app').scrollIntoView({behavior: "smooth"});
             },
+            handleScroll() {
+                let pageOffset = window.pageYOffset || document.documentElement.scrollTop;
+                if (pageOffset === 0) {
+                    this.resetTags();
+                } else {
+                    let pageSections = document.getElementsByClassName('page-section');
+                    for (let pageSection of pageSections) {
+                        if (pageSection.offsetTop <= pageOffset + 55) {
+                            const id = pageSection.getAttribute('id');
+
+                            this.displayRoutes.forEach(oneRoute => {
+                                oneRoute.tags.forEach(tag => {
+                                    tag.active = tag.path === id;
+                                })
+                            });
+                        }
+                    }
+                }
+            }
         },
         created() {
             this.displayRoutes = routes.filter(route => {
                 return route.name !== '404';
             });
+            window.addEventListener('scroll', this.handleScroll);
+        },
+        destroyed() {
+            window.removeEventListener('scroll', this.handleScroll);
         }
     }
 </script>
