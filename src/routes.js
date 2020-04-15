@@ -6,7 +6,7 @@ import PageNotFoundComponent from "./components/PageNotFoundComponent";
 export default [
     {
         path: '/',
-        name: 'Home',
+        name: 'GorAlex',
         component: HomeComponent,
         tags: [
             {

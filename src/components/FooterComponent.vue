@@ -21,7 +21,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 5vh;
+        height: 55px;
         color: #ffffff;
         background-color: #25242c;
     }

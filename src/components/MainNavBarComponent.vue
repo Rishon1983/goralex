@@ -1,27 +1,38 @@
 <template>
-    <div class="main-nav-bar">
-        <div @click="activeHome" class="header-text-container">
-            <router-link to="/" tag="div" class="header-text" data-text="gorALeX">GorAlex</router-link>
-        </div>
-        <!-- use router-link component for navigation. -->
-        <!-- specify the link by passing the `to` prop. -->
-        <!-- <router-link> will be rendered as an `<a>` tag by default -->
-        <div v-for="(oneRoute, index) in displayRoutes" :key="index" class="one-route">
-            <div @click="resetTags" class="main-nav-bar-option-container">
-                <router-link v-if="oneRoute.tags.length === 0" :to="oneRoute.path" tag="div"
-                             class="main-nav-bar-option">
-                    {{oneRoute.name}}
-                </router-link>
+    <div id="main-nav-bar" class="main-nav-bar-component">
+        <div class="container">
+            <div @click="activeRoute()" class="header-text-container">
+                <router-link to="/" tag="div" class="header-text" data-text="gorALeX">GorAlex</router-link>
             </div>
-            <div v-for="(oneTag, index) in oneRoute.tags" :key="index" class="sub-nav-bar-option-container"
-                 @click="activeTag(oneRoute.tags, index)">
-                <router-link :to="oneRoute.path" :class="{active: oneTag.active}" tag="div" class="sub-nav-bar-option">
-                    {{oneTag.name}}
-                </router-link>
+            <div @click="isOpenMenu = !isOpenMenu" class="display-route">
+                <font-awesome-icon v-if="!isOpenMenu" class="icon" :icon="['fas', 'chevron-circle-down']"/>
+                <font-awesome-icon v-if="isOpenMenu" class="icon" :icon="['fas', 'chevron-circle-up']"/>
+                <div class="text">{{selectedTagName}}</div>
             </div>
+            <div class="menu" :class="{hide: !isOpenMenu}">
+                <!-- use router-link component for navigation. -->
+                <!-- specify the link by passing the `to` prop. -->
+                <!-- <router-link> will be rendered as an `<a>` tag by default -->
+                <div v-for="(oneRoute, index) in displayRoutes" :key="index" class="one-route">
+                    <div @click="activeRoute(oneRoute)" class="main-nav-bar-option-container">
+                        <router-link v-if="oneRoute.tags.length === 0" :to="oneRoute.path" tag="div"
+                                     class="main-nav-bar-option one-option">
+                            {{oneRoute.name}}
+                        </router-link>
+                    </div>
+                    <div v-for="(oneTag, index) in oneRoute.tags" :key="index" class="sub-nav-bar-option-container"
+                         @click="activeTag(oneRoute.tags, index)">
+                        <router-link :to="oneRoute.path" :class="{active: oneTag.active}" tag="div"
+                                     class="sub-nav-bar-option one-option">
+                            {{oneTag.name}}
+                        </router-link>
+                    </div>
 
+                </div>
+            </div>
         </div>
     </div>
+
 </template>
 
 <script>
@@ -31,7 +42,9 @@
         name: "MainNavBarComponent",
         data() {
             return {
-                displayRoutes: []
+                displayRoutes: [],
+                selectedTagName: 'GorAlex',
+                isOpenMenu: false
             };
         },
         computed: {},
@@ -40,27 +53,24 @@
                 tags.forEach((tag, index) => {
                     if (index === activeIndex) {
                         tag.active = true;
+                        this.selectedTagName = tag.name;
                         document.getElementById(tag.path).scrollIntoView({behavior: "smooth"});
                     } else {
                         tag.active = false;
                     }
-                })
+                });
+                this.isOpenMenu = false;
             },
-            resetTags() {
+            activeRoute(route = this.displayRoutes[0]) {
                 this.displayRoutes.forEach(oneRoute => {
                     oneRoute.tags.forEach(tag => {
                         tag.active = false;
                     })
                 });
-            },
-            activeHome() {
-                routes.forEach(oneRoute => {
-                    oneRoute.tags.forEach(tag => {
-                        tag.active = false;
-                    })
-                });
+                this.selectedTagName = route.name;
+                this.isOpenMenu = false;
                 document.getElementById('app').scrollIntoView({behavior: "smooth"});
-            }
+            },
         },
         created() {
             this.displayRoutes = routes.filter(route => {
@@ -71,95 +81,114 @@
 </script>
 
 <style lang="scss" scoped>
-    .main-nav-bar {
+    #main-nav-bar.main-nav-bar-component {
         position: sticky;
         top: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 55px;
-        width: 100%;
-        background-color: #25242c;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        color: #ffffff;
         z-index: 500;
 
-        .header-text-container {
-            .header-text {
-                position: absolute;
-                height: 100%;
-                top: 0;
-                left: 0;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 0 2.1em;
-                font-size: 2.1em;
-                font-family: 'Lobster', Lobster, Arial, sans-serif;
-
-                &:hover {
-                    cursor: pointer;
-                    color: #c5c5c5;
-                }
-            }
-        }
-
-        .one-route {
+        .container {
             display: flex;
-            height: 100%;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-color: #25242c;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            color: #ffffff;
 
-            .main-nav-bar-option {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100%;
-                padding: 0 15px;
+            .display-route {
+                display: none;
+            }
 
-                a {
-                    text-decoration: none;
-                }
+            .header-text-container {
+                height: 55px;
 
-                &.router-link-exact-active {
-                    background-color: #000000;
-                    color: #ffffff;
-                }
+                .header-text {
+                    position: absolute;
+                    height: 55px;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 2.1em;
+                    font-size: 2.1em;
+                    font-family: 'Lobster', Lobster, Arial, sans-serif;
 
-                &:not(.router-link-exact-active) {
                     &:hover {
                         cursor: pointer;
-                        background-color: #d9d9d9;
-                        color: #000000;
+                        color: #c5c5c5;
                     }
                 }
             }
 
-            .sub-nav-bar-option-container {
+            .menu {
                 display: flex;
+                align-items: center;
+                justify-content: center;
+                height: auto;
 
-                .sub-nav-bar-option {
+                .one-route {
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
                     height: 100%;
-                    padding: 0 15px;
-                    cursor: pointer;
 
-                    &.active {
-                        background-color: #000000;
-                        color: #ffffff;
+                    .one-option {
+                        height: 55px;
                     }
 
-                    &:not(.active) {
-                        &:hover {
-                            cursor: pointer;
-                            background-color: #d9d9d9;
-                            color: #000000;
+                    .main-nav-bar-option {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 0 15px;
+
+                        a {
+                            text-decoration: none;
+                        }
+
+                        &.router-link-exact-active {
+                            background-color: #000000;
+                            color: #ffffff;
+                        }
+
+                        &:not(.router-link-exact-active) {
+                            &:hover {
+                                cursor: pointer;
+                                background-color: #d9d9d9;
+                                color: #000000;
+                            }
                         }
                     }
+
+                    .sub-nav-bar-option-container {
+                        display: flex;
+
+                        .sub-nav-bar-option {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 0 15px;
+                            cursor: pointer;
+
+                            &.active {
+                                background-color: #000000;
+                                color: #ffffff;
+                            }
+
+                            &:not(.active) {
+                                &:hover {
+                                    cursor: pointer;
+                                    background-color: #d9d9d9;
+                                    color: #000000;
+                                }
+                            }
+                        }
+                    }
+
                 }
             }
+
 
         }
     }
@@ -169,8 +198,76 @@
     }
 
     @media screen and (max-width: 1000px) {
+        #main-nav-bar.main-nav-bar-component {
+            .container {
+                .header-text-container {
+                    .header-text {
+                        padding: 0 .5em;
+                        font-size: 1.5em;
+                    }
+                }
+
+                .menu {
+                    .one-route {
+                        .one-option {
+                            padding: 0 8px !important;
+                            border-inline-start: 0.5px solid #424040;;
+                        }
+
+                        &:last-child {
+                            border-inline-end: 0.5px solid #424040;;
+                        }
+                    }
+                }
+            }
+        }
+
     }
 
     @media screen and (max-width: 770px) {
+        #main-nav-bar.main-nav-bar-component {
+            .container {
+                .display-route {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 55px;
+                    padding: 0 0.7em;
+                    background-color: #000000;
+
+                    .icon {
+                        margin: 0 7px;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                .menu {
+                    position: absolute;
+                    top: 54px;
+                    width: fit-content;
+                    flex-direction: column;
+                    background-color: #25242c;
+                    box-shadow: 0 4px 9px 0 rgba(44, 62, 80, 0.75);
+
+                    .one-route {
+                        width: 100%;
+                        flex-direction: column;
+                        border: none !important;
+
+                        .one-option {
+                            width: 100%;
+                            border: none !important;
+                        }
+                    }
+
+                    &.hide {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 </style>
