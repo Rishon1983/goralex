@@ -79,7 +79,7 @@
 
     @media screen and (max-width: 770px) {
         .page-section {
-            padding: 1em;
+            padding: 4em 1em;
         }
         .main-title {
             font-size: 2.3em;

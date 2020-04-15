@@ -78,6 +78,7 @@
                 let pageOffset = window.pageYOffset || document.documentElement.scrollTop;
                 if (pageOffset === 0) {
                     this.resetTags();
+                    this.selectedTagName = 'GorAlex';
                 } else {
                     let pageSections = document.getElementsByClassName('page-section');
                     for (let pageSection of pageSections) {
@@ -86,7 +87,12 @@
 
                             this.displayRoutes.forEach(oneRoute => {
                                 oneRoute.tags.forEach(tag => {
-                                    tag.active = tag.path === id;
+                                    if (tag.path === id) {
+                                        tag.active = true;
+                                        this.selectedTagName = tag.name;
+                                    } else {
+                                        tag.active = false;
+                                    }
                                 })
                             });
                         }
