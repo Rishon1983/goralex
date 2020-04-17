@@ -67,6 +67,10 @@
         }
     }
 
+    address {
+        font-style: normal;
+    }
+
     span.span-inline {
         margin-inline-end: 5px;
         flex: none;
