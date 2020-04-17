@@ -9,7 +9,7 @@
                 <font-awesome-icon v-if="isOpenMenu" class="icon" :icon="['fas', 'chevron-circle-up']"/>
                 <div class="text">{{selectedTagName}}</div>
             </div>
-            <div class="menu" :class="{hide: !isOpenMenu}">
+            <menu class="menu" :class="{hide: !isOpenMenu}">
                 <!-- use router-link component for navigation. -->
                 <!-- specify the link by passing the `to` prop. -->
                 <!-- <router-link> will be rendered as an `<a>` tag by default -->
@@ -29,7 +29,7 @@
                     </div>
 
                 </div>
-            </div>
+            </menu>
         </div>
     </section>
 
@@ -158,6 +158,7 @@
                 align-items: center;
                 justify-content: center;
                 height: auto;
+                box-shadow: 0 7px 8px -12px rgba(44,62,80,.75);
 
                 .one-route {
                     display: flex;
@@ -178,8 +179,8 @@
                         }
 
                         &.router-link-exact-active {
-                            background-color: #000000;
-                            color: #ffffff;
+                            background-color: #f1efef;
+                            color: #000000;
                         }
 
                         &:not(.router-link-exact-active) {
@@ -202,8 +203,8 @@
                             cursor: pointer;
 
                             &.active {
-                                background-color: #000000;
-                                color: #ffffff;
+                                background-color: #f1efef;
+                                color: #000000;
                             }
 
                             &:not(.active) {

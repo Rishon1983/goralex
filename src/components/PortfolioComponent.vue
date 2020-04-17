@@ -41,7 +41,7 @@
                         name: 'Musah',
                         site: 'https://musah.co.il/site/',
                         image: 'musah.jpg',
-                        description: `<span class="span-inline">Together with</span> <span class="span-inline"><a href="https://www.linkedin.com/in/qmegas/" target="_blank">Stanislav Murtazin</a></span> <span class="span-inline">developed platform to search for auto services in Israel.</span>`,
+                        description: `Together with PHP developer developed platform to search for auto services in Israel.`,
                         date: '2015'
                     },
                     {

@@ -71,6 +71,11 @@
         font-style: normal;
     }
 
+    menu {
+        padding: 0;
+        margin: 0;
+    }
+
     span.span-inline {
         margin-inline-end: 5px;
         flex: none;
