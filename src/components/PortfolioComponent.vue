@@ -1,7 +1,7 @@
 <template>
-    <div id="portfolio" class="portfolio-component page-section">
+    <section id="portfolio" class="portfolio-component page-section">
         <div class="container">
-            <div class="main-title title">Portfolio</div>
+            <header class="main-title title">Portfolio</header>
             <div class="portfolio-projects-container">
                 <div v-for="(oneProject, index) in portfolioProjects" :key="index"
                      @click="openCloseProjectLocally(oneProject)"
@@ -12,7 +12,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -27,21 +27,21 @@
                         name: 'Air Doctor',
                         site: 'https://air-dr.com/',
                         image: 'air-dr.jpg',
-                        description: `Worked at the present job (hippotec).`,
+                        description: `Platform for matching users and trusted doctors of any specialty around the world. Developed client-side at the current job (Hippotec Ltd).`,
                         date: '2017'
                     },
                     {
                         name: 'Probuild',
                         site: 'https://www.probuild.co.il/',
                         image: 'probuild.jpg',
-                        description: `Worked at the present job (hippotec).`,
+                        description: `Project management and ERP for large scale construction projects. Developed client-side and server-side at the current job (Hippotec Ltd)`,
                         date: '2016-2017, 2018-2020'
                     },
                     {
                         name: 'Musah',
                         site: 'https://musah.co.il/site/',
                         image: 'musah.jpg',
-                        description: `I'm one of the creators of project. Adding, systematization of information etc.`,
+                        description: `<span class="span-inline">Together with</span> <span class="span-inline"><a href="https://www.linkedin.com/in/qmegas/" target="_blank">Stanislav Murtazin</a></span> <span class="span-inline">developed platform to search for auto services in Israel.</span>`,
                         date: '2015'
                     },
                     {

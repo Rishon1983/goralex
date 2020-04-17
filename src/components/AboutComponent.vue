@@ -1,20 +1,21 @@
 <template>
-    <div id="about" class="about-component page-section">
+    <section id="about" class="about-component page-section">
         <div class="container">
             <div class="title-container">
-                <div class="main-title title">About me</div>
-                <div class="main-title title">Alexander Gorbatovsky</div>
+                <header class="main-title title">About me</header>
+                <header class="main-title title">Alexander Gorbatovsky</header>
                 <div class="profile-img-container">
                     <img alt="my photo" src="@/assets/about/my-photo.jpg">
                 </div>
+                <header class="title prof">Full stack web developer</header>
                 <div class="title-info">
                     <div class="one-raw">
                         <font-awesome-icon :icon="['fas', 'caret-right']"/>
-                        <div class="text">Able to work on your own or in a team.</div>
+                        <div class="text">Able to work individually or in a team.</div>
                     </div>
                     <div class="one-raw">
                         <font-awesome-icon :icon="['fas', 'caret-right']"/>
-                        <div class="text">Superior attention to detail.</div>
+                        <div class="text">Attention to detail.</div>
                     </div>
                     <div class="one-raw">
                         <font-awesome-icon :icon="['fas', 'caret-right']"/>
@@ -29,8 +30,8 @@
                     </div>
                     <div class="timeline-panel">
                         <div class="timeline-title-container">
-                            <div class="timeline-title">2009-2013</div>
-                            <div class="timeline-sub-title">B.Sc.,Computer Science (Holon Institute of Technology)</div>
+                            <header class="timeline-title">2009-2013</header>
+                            <header class="timeline-sub-title">B.Sc.,Computer Science (Holon Institute of Technology)</header>
                         </div>
                         <div class="timeline-body">
                             <div>
@@ -54,8 +55,8 @@
                     </div>
                     <div class="timeline-panel">
                         <div class="timeline-title-container">
-                            <div class="timeline-title">2010-2015:</div>
-                            <div class="timeline-sub-title">Network Operations Center at Gigya</div>
+                            <header class="timeline-title">2010-2015:</header>
+                            <header class="timeline-sub-title">Network Operations Center at Gigya</header>
                         </div>
                         <div class="timeline-body">
                             <div>
@@ -79,8 +80,8 @@
                     </div>
                     <div class="timeline-panel">
                         <div class="timeline-title-container">
-                            <div class="timeline-title">2016-Present</div>
-                            <div class="timeline-sub-title">Web Developer at Hippotec Ltd</div>
+                            <header class="timeline-title">2016-Present</header>
+                            <header class="timeline-sub-title">Web Developer at Hippotec Ltd</header>
                         </div>
                         <div class="timeline-body">
                             <div>
@@ -110,7 +111,7 @@
                     Hebrew</a>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -142,6 +143,11 @@
 
                 .title {
                     margin-bottom: 10px;
+
+                    &.prof {
+                        font-family: "Lobster", Lobster, Arial, sans-serif;
+                        font-size: 2em;
+                    }
                 }
 
                 .profile-img-container {

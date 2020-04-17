@@ -4,9 +4,9 @@
             <div class="header">
                 <font-awesome-icon @click="openCloseProjectLocally" class="icon" :icon="['fas', 'times']"/>
             </div>
-            <div class="main-title title">{{projectName}}</div>
+            <header class="main-title title">{{projectName}}</header>
             <img class="project-image" alt="project image" :src="getImgPath(projectImage)">
-            <div class="project-description">{{projectDescription}}</div>
+            <div class="project-description" v-html="projectDescription"></div>
             <a :href="projectSite" class="link" target="_blank">{{projectSite}}</a>
             <div class="date">{{projectDate}}</div>
         </div>

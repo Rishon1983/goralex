@@ -1,7 +1,7 @@
 <template>
-    <div id="footer" class="footer-component">
+    <footer id="footer" class="footer-component">
         <div>Copyright © GorAlex {{currentYear}}</div>
-    </div>
+    </footer>
 </template>
 
 <script>

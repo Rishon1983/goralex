@@ -1,21 +1,21 @@
 <template>
-    <div id="skills" class="skills-component page-section">
+    <section id="skills" class="skills-component page-section">
         <div class="container">
-            <div class="main-title title">Programming skills</div>
+            <header class="main-title title">Programming skills</header>
             <div class="skills-container">
                 <div v-for="(skill, index) of skills" :key="index" class="one-skill">
                     <div class="logo-container">
                         <img alt="skill image" :src="getLogoPath(skill)">
                     </div>
                     <div class="skill-info">
-                        <div class="title">{{skill.name}}</div>
+                        <header class="title">{{skill.name}}</header>
                         <div class="description" v-html="skill.description"></div>
                     </div>
                 </div>
             </div>
             <a href="/CV/Grades.pdf" class="download" download="Grades-Alexander Gorbatovsky">Download grades</a>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -27,67 +27,67 @@
                     {
                         name: 'Vue.js',
                         logoPath: 'vuejs.png',
-                        description: 'Use at the present job (hippotec).'
+                        description: 'Used in Hippotec Ltd (current job).'
                     },
                     {
                         name: 'AngularJS',
                         logoPath: 'angularjs.png',
-                        description: 'Use at the present job (hippotec).'
+                        description: 'Used in Hippotec Ltd (current job).'
                     },
                     {
                         name: 'Knockout.js',
                         logoPath: 'knockout.png',
-                        description: 'Use at the present job (hippotec).'
+                        description: 'Used in Hippotec Ltd (current job).'
                     },
                     {
                         name: 'jQuery',
                         logoPath: 'jq.png',
-                        description: 'Use at the present job (hippotec).'
+                        description: 'Used in Hippotec Ltd (current job).'
                     },
                     {
                         name: 'JavaScript',
                         logoPath: 'js.png',
-                        description: 'Use at the present job (hippotec). Worked as a freelancer.'
+                        description: 'Used in Hippotec Ltd (current job). Worked as a freelancer.'
                     },
                     {
                         name: 'Node.js',
                         logoPath: 'nodejs.png',
-                        description: 'Use at the present job (hippotec).'
+                        description: 'Used in Hippotec Ltd (current job).'
                     },
                     {
                         name: 'PHP',
                         logoPath: 'php.png',
-                        description: `Use at the present job (hippotec). Worked on the project <a href="http://musah.co.il/" target="_blank">musah.co.il</a>.`
+                        description: `Used in Hippotec Ltd (current job). Worked on the project <a href="http://musah.co.il/" target="_blank">musah.co.il</a>.`
                     },
                     {
                         name: 'Bootstrap',
                         logoPath: 'bootstrap.png',
-                        description: 'Use at the present job (hippotec).'
+                        description: 'Used in Hippotec Ltd (current job).'
                     },
                     {
                         name: 'HTML5',
                         logoPath: 'html5.png',
-                        description: 'Use at the present job (hippotec).'
+                        description: 'Used in Hippotec Ltd (current job).'
                     },
                     {
                         name: 'SCSS',
                         logoPath: 'scss.png',
-                        description: 'Use at the present job (hippotec).'
+                        description: 'Used in Hippotec Ltd (current job).'
                     },
                     {
                         name: 'CSS3',
                         logoPath: 'css3.png',
-                        description: 'Use at the present job (hippotec).'
+                        description: 'Used in Hippotec Ltd (current job).'
                     },
                     {
                         name: 'MongoDB',
                         logoPath: 'mongo.png',
-                        description: 'Use at the present job (hippotec).'
+                        description: 'Used in Hippotec Ltd (current job).'
                     },
                     {
                         name: 'MySQL',
                         logoPath: 'mysql.png',
-                        description: 'Use at the present job (hippotec).'
+                        description: 'Used in Hippotec Ltd (current job).'
                     },
                     {
                         name: 'XAMPP',
@@ -102,7 +102,7 @@
                     {
                         name: 'SVG',
                         logoPath: 'svg.png',
-                        description: 'Created new font icons at the present job (hippotec).'
+                        description: 'Created new font icons in Hippotec Ltd (current job)'
                     },
                     {
                         name: '.NET',

@@ -1,9 +1,9 @@
 <template>
-    <div id="coding" class="coding-component page-section">
+    <section id="coding" class="coding-component page-section">
         <div class="container">
-            <div class="main-title title">Coding</div>
+            <header class="main-title title">Coding</header>
             <div class="one-project">
-                <div class="title">Harmony synel countdown timer</div>
+                <header class="title">Harmony synel countdown timer</header>
                 <div class="description">Harmony-synel-countdown-timer is a userscript that adds an element with
                     countdown timer working hours. It shows how many hours you need to work today, as well as the total
                     number of hours for the current month. The calculation is based on how many hours left or how many
@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>

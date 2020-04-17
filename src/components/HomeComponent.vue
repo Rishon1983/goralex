@@ -67,6 +67,11 @@
         }
     }
 
+    span.span-inline {
+        margin-inline-end: 5px;
+        flex: none;
+    }
+
     /*media*/
     @media screen and (max-width: 1200px) {
         .page-section {

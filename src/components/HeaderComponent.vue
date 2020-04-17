@@ -1,9 +1,9 @@
 <template>
-    <div id="main-header" class="header">
+    <section id="main-header" class="header">
         <div @click="activeHome" class="header-text-container">
             <router-link to="/" tag="div" class="header-text">GA</router-link>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>

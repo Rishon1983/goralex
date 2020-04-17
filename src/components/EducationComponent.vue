@@ -1,10 +1,10 @@
 <template>
-    <div id="education" class="education-component page-section">
+    <section id="education" class="education-component page-section">
         <div class="container">
-            <div class="main-title title">Education</div>
+            <header class="main-title title">Education</header>
             <img alt="logo" class="hit" src="@/assets/education/degree.jpg">
         </div>
-    </div>
+    </section>
 </template>
 
 <script>

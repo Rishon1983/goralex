@@ -1,5 +1,5 @@
 <template>
-    <div id="main-nav-bar" class="main-nav-bar-component">
+    <section id="main-nav-bar" class="main-nav-bar-component">
         <div class="container">
             <div @click="activeRoute" class="header-text-container">
                 <router-link to="/" tag="div" class="header-text" data-text="gorALeX">GorAlex</router-link>
@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 </template>
 
