@@ -19,7 +19,7 @@
                               style="resize:none"></textarea>
                     </div>
                 </div>
-                <div class="form-button">Send Message</div>
+                <button class="form-button">Send Message</button>
             </div>
             <div class="contact-info-container">
                 <div class="contact-info">
