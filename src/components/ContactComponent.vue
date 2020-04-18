@@ -164,6 +164,11 @@
                     font-weight: 400;
                     margin: 20px;
                     padding: 0 15px;
+                    border: 0;
+
+                    &:focus {
+                        outline: none;
+                    }
 
                     &:hover {
                         background-color: #2f5ad6;
