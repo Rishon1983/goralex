@@ -53,7 +53,7 @@
                     },
                     {
                         name: 'GorAlex',
-                        site: 'http://goralex.com/',
+                        site: 'https://goralex.com/',
                         image: 'goralex-php.jpg',
                         description: `Previous version of the site goralex. It was written with framework php phalcon.`,
                         date: '2015'

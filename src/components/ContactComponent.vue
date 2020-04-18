@@ -4,7 +4,7 @@
             <header class="main-title title">Contact me</header>
             <div class="map-container">
                 <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                        src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=31.9654205,34.659786&amp;t=m&amp;z=10&amp;output=embed&q=Rishon LeTsiyon, Israel&zoom=10"></iframe>
+                        src="https://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=31.9654205,34.659786&amp;t=m&amp;z=10&amp;output=embed&q=Rishon LeTsiyon, Israel&zoom=10"></iframe>
             </div>
             <div class="form-mail-container">
                 <div class="form-body">
