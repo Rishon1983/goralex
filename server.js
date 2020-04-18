@@ -24,6 +24,4 @@ http.createServer((req, res) => {
     res.end();
 }).listen(80);
 
-https.createServer(options, (req, res) => {
-    res.end('https');
-}).listen(443);
+https.createServer(options, app).listen(443);
