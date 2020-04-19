@@ -76,6 +76,31 @@
                 </div>
                 <div class="timeline">
                     <div class="timeline-image">
+                        <img alt="logo" src="@/assets/about/freelancer.jpg">
+                    </div>
+                    <div class="timeline-panel">
+                        <div class="timeline-title-container">
+                            <header class="timeline-title">2015-2016:</header>
+                            <header class="timeline-sub-title">Freelancer Web Developer</header>
+                        </div>
+                        <div class="timeline-body">
+                            <div>
+                                <font-awesome-icon class="icon" :icon="['fas', 'chevron-circle-right']"/>
+                                <div>Building server-side using PHP, MySQL</div>
+                            </div>
+                            <div>
+                                <font-awesome-icon class="icon" :icon="['fas', 'chevron-circle-right']"/>
+                                <div>Building client-side using JavaScript, HTML, CSS</div>
+                            </div>
+                            <div>
+                                <font-awesome-icon class="icon" :icon="['fas', 'chevron-circle-right']"/>
+                                <div>Using libraries like jQuery, Bootstrap</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-image">
                         <img alt="logo" src="@/assets/about/hippotec.png">
                     </div>
                     <div class="timeline-panel">
