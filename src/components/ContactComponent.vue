@@ -96,15 +96,17 @@
 
             .map-container {
                 width: 60%;
+                margin-bottom: 40px;
             }
 
             .form-mail-container {
+                display: none;
                 width: 60%;
-                display: flex;
+                /*display: flex;*/
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                margin: 40px 0 40px 0;
+                margin: 0 0 40px 0;
 
                 .form-body {
                     width: 100%;
