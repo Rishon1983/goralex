@@ -5,7 +5,7 @@
                 <header class="main-title title">About me</header>
                 <header class="main-title title">Alexander Gorbatovsky</header>
                 <div class="profile-img-container">
-                    <img alt="my photo" src="@/assets/about/my-photo.jpg">
+                    <img alt="my photo" src="@/assets/about/my-photo.png">
                 </div>
                 <header class="title prof">Full stack web developer</header>
                 <div class="title-info">
