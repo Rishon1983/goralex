@@ -19,7 +19,7 @@
                     </div>
                     <div class="one-raw">
                         <font-awesome-icon :icon="['fas', 'caret-right']"/>
-                        <div class="text">Creative thinker, energetic, innovative.</div>
+                        <div class="text">Creative, energetic, innovative.</div>
                     </div>
                 </div>
             </div>
