@@ -1,4 +1,4 @@
-# goralex
+# goralex - This is my Vue.js code example
 
 ## Project setup
 ```
