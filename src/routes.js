@@ -1,6 +1,7 @@
 import HomeComponent from './components/HomeComponent';
 import CodingComponent from "./components/CodingComponent";
 import PageNotFoundComponent from "./components/PageNotFoundComponent";
+import TestComponent from "./components/TestComponent";
 
 /*Create the router with route components*/
 export default [
@@ -40,6 +41,12 @@ export default [
         path: '/coding',
         name: 'Coding',
         component: CodingComponent,
+        tags: []
+    },
+    {
+        path: '/test',
+        name: 'Test',
+        component: TestComponent,
         tags: []
     },
     {
