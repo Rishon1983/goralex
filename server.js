@@ -1,17 +1,11 @@
-const express = require('express');
-
-const fs = require('fs');
-const http = require('http');
-const https = require('https');
+import express from 'express';
+import fs from 'fs';
+import http from 'http';
+import https from 'https';
 
 const app = express();
 
 const publicDir = 'dist';
-const options = {
-    key: fs.readFileSync('/etc/letsencrypt/live/goralex.com/privkey.pem'),
-    cert: fs.readFileSync('/etc/letsencrypt/live/goralex.com/cert.pem'),
-    ca: fs.readFileSync('/etc/letsencrypt/live/goralex.com/chain.pem')
-};
 
 app.use(express.static(publicDir));
 
@@ -19,9 +13,21 @@ app.get('/*', function (req, res) {
     res.sendFile('index.html', {root: publicDir});
 });
 
-http.createServer((req, res) => {
-    res.writeHead(301, {"Location": "https://" + req.headers['host'] + req.url});
-    res.end();
-}).listen(80);
+//check production or dev
+if(process.env.NODE_ENV === undefined || process.env.NODE_ENV.trim() !== 'dev'){
+    const options = {
+        key: fs.readFileSync('/etc/letsencrypt/live/goralex.com/privkey.pem'),
+        cert: fs.readFileSync('/etc/letsencrypt/live/goralex.com/cert.pem'),
+        ca: fs.readFileSync('/etc/letsencrypt/live/goralex.com/chain.pem')
+    };
+    http.createServer((req, res) => {
+        res.writeHead(301, {"Location": "https://" + req.headers['host'] + req.url});
+        res.end();
+    }).listen(80);
 
-https.createServer(options, app).listen(443);
+    https.createServer(options, app).listen(443);
+} else {
+    app.listen(80, () => {
+        console.log('Dev server started');
+    });
+}
