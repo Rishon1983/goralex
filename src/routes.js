@@ -2,6 +2,7 @@ import HomeComponent from './components/HomeComponent';
 import CodingComponent from "./components/CodingComponent";
 import PageNotFoundComponent from "./components/PageNotFoundComponent";
 import TestComponent from "./components/TestComponent";
+import ProjectsComponent from "./components/ProjectsComponent";
 
 /*Create the router with route components*/
 export default [
@@ -41,6 +42,12 @@ export default [
         path: '/coding',
         name: 'Coding',
         component: CodingComponent,
+        tags: []
+    },
+    {
+        path: '/projects',
+        name: 'Projects',
+        component: ProjectsComponent,
         tags: []
     },
     {

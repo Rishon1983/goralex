@@ -100,7 +100,7 @@
         },
         created() {
             this.displayRoutes = routes.filter(route => {
-                return (route.name !== '404' && route.name !== 'Test');
+                return (route.name !== '404' && route.name !== 'Test' && route.name !== 'Projects');
             });
             window.addEventListener('scroll', this.handleScroll);
         },
