@@ -83,7 +83,7 @@
             .one-project {
                 width: 65%;
                 padding: 30px 0;
-                border-bottom: 1px solid;
+                border-bottom: 1px solid #e0e0e0;
 
                 .title {
                     font-size: 1.2em;
@@ -107,8 +107,18 @@
 
                 button {
                     height: 35px;
+                    width: 95px;
                     margin-top: 15px;
                     cursor: pointer;
+                    padding: 0;
+
+                    .main-nav-bar-option.one-option {
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
                 }
             }
         }

@@ -2,6 +2,7 @@ import express from 'express';
 import fs from 'fs';
 import http from 'http';
 import https from 'https';
+import {initSocket} from './socketIO.js';
 
 const app = express();
 
@@ -14,7 +15,7 @@ app.get('/*', function (req, res) {
 });
 
 //check production or dev
-if(process.env.NODE_ENV === undefined || process.env.NODE_ENV.trim() !== 'dev'){
+if (process.env.NODE_ENV === undefined || process.env.NODE_ENV.trim() !== 'dev') {
     const options = {
         key: fs.readFileSync('/etc/letsencrypt/live/goralex.com/privkey.pem'),
         cert: fs.readFileSync('/etc/letsencrypt/live/goralex.com/cert.pem'),
@@ -27,7 +28,11 @@ if(process.env.NODE_ENV === undefined || process.env.NODE_ENV.trim() !== 'dev'){
 
     https.createServer(options, app).listen(443);
 } else {
-    app.listen(80, () => {
+    const server = app.listen(80, () => {
         console.log('Dev server started');
+
+        //socket
+        initSocket(server);
+
     });
 }
