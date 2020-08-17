@@ -21,7 +21,7 @@
 
 <script>
     import {mapActions} from 'vuex';
-    import ChatComponent from "./ChatComponent";
+    // import ChatComponent from "./ChatComponent";
 
     export default {
         name: "CodingComponent",
@@ -42,14 +42,14 @@
                         img: '',
                         component: ''
                     },
-                    {
+                    /*{
                         title: 'Basic chat',
                         description: 'This chat created for learning socket.io.',
                         pathMode: 'button',
                         href: '',
                         img: '',
                         component: ChatComponent
-                    }
+                    }*/
                 ]
             }
         },
