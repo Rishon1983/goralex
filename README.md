@@ -10,20 +10,7 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Use a Web Application
 ```
-npm run build
+http://localhost:8080/
 ```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
