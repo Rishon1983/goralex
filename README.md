@@ -1,6 +1,6 @@
 # Goralex.com
-## This is my site (client side) with information about me.
-## Made with the Vue.js Framework
+### This is my site (client side) with information about me.
+### Made with the Vue.js Framework
 
 ## Project setup
 ```
